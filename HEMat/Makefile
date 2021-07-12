@@ -53,7 +53,7 @@ new:
 ###############################################################
 
 test:
-	g++ -std=c++11 -O2 -I/usr/local/include -pthread main.cpp ../src/libheaan.a libHEMat.a -o foo -L/usr/local/lib -lntl -lgmp -lm
+	g++ -std=c++11 -O2 -I/usr/local/include -pthread main.cpp ../src/libheaan.a libHEMat.a -o foo -L/usr/local/lib -L. -L../src -lntl -lgmp -lm -lHEMat -lheaan
 
 
 obj: $(OBJ)
