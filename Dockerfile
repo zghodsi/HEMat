@@ -5,6 +5,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install \
     ca-certificates make g++ libgmp-dev libntl-dev
 
 
-RUN git clone https://github.com/zghodsi/HEMat && cd HEMat/src && make all
-RUN cd HEMat/HEMat && make new && make test
+RUN git clone https://github.com/zghodsi/HEMat 
+RUN cd HEMat/src && make all && cd ../HEMat && make new && make test
+WORKDIR HEMat/HEMat
 
